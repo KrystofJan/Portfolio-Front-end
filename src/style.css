@@ -1,0 +1,66 @@
+:root{
+  --background-color: #323238;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+#app{
+  height: 100%;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.center-image{
+  width: 20rem;
+  height: 20rem;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1 rem solid #000;
+  position: relative;
+}
+#profile-pic{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+#profile-pic:hover{
+  transform: scale(1.1);
+}
+/* #profile-pic::before{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+} */
+.icon{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transition: 0.1s;
+  transform-origin: center;
+  z-index: -1;
+}
+.icon:hover{
+  background-color: #fff;
+}
+#icon-img{
+  filter: invert(1);
+  width: 1.5rem;
+  height: 1.5rem;
+}
