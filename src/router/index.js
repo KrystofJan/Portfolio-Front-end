@@ -11,6 +11,16 @@ const routes = [
         name: 'blog',
         component: () => import("../components/Blog.vue")
     },
+    {
+        path: '/aboutme',
+        name: 'aboutme',
+        component: () => import("../components/AboutMe.vue")
+    },
+    {
+        path: '/float',
+        name: 'float',
+        component: () => import("../components/FloatingIcons.vue")
+    },
 ];
 
 const router = createRouter({

@@ -15,7 +15,7 @@ body{
   padding: 0 !important;
   background-color: var(--background-nonlinear-1-color);
   font-family: 'Poppins', sans-serif;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   will-change: transform, opacity;
 }
 #app{
@@ -121,14 +121,17 @@ body{
 }
 
 .blog{
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
+  width: 100vw;
   background: var(--background-nonlinear-color);
   padding: 0;
   margin: 0;
 }
 
-.float-icon{
+/* .float-icon{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -141,7 +144,7 @@ body{
   z-index: -1;
   width: 3rem;
   height: 3rem;
-}
+} */
 .back-to-top{
   position: absolute;
   top: 0;
