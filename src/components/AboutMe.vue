@@ -1,5 +1,10 @@
 <template>
+    <!-- Maybe change the design of the callendar -->
+    <!-- Make the colors blend from pastelle to darker more "adult" colors symbolize  growing up ?-->
+    <!-- Maybe make the design more and more complex -->
+    <!-- BACKGROUND animated... some space stuff or like graphic of time going by or smth like that -->
     <main>
+    <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
     <div id="timeline">
         <div class="time-point">
             <h1 class="headln">Early childhood</h1>
@@ -7,6 +12,11 @@
                 <section class="images">
                     <img src="https://picsum.photos/200/300" alt="picsum">
                 </section>
+                <div class="line">
+                    <Callendar :month="`JAN`"/>
+                    <Callendar :month="`FEB`"/>
+                    <Callendar :month="`MAR`"/>
+                </div>
                 <article class="Text">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate atque maiores dolorum sunt voluptas nisi cumque ad! At, eius sed deleniti voluptas fugit voluptatem? Veritatis voluptatum corrupti corporis voluptas?
@@ -70,17 +80,23 @@
             </div> 
         </div>
     </div>
-    <div id="line">
-    </div>
+
 </main>
 </template>
 
-<script setup>
-
+<script>
+import Callendar from '../components/Callendar.vue'
+export default {
+    components: {
+        Callendar
+    },
+}
 </script>
 
 <style scoped>
 main{
+    z-index: -1;
+    background-color: aquamarine;
     position: absolute;
     top: 0;
     left: 0;
@@ -88,44 +104,40 @@ main{
     padding: 0;
 }
 .headln{
-    background-color: #fff;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: #00ceab;
     border-radius: 1rem;
     width: fit-content;
     padding: 0.5rem;
 }
-#line{
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 5vw);
-    background-color: #fff;
-    width: 10vw;
-    height: 100%;
-}
+
 #timeline{
     min-height: 100vh;
 }
-.headln{
-    z-index: 2;
-    margin: 0 auto;
-}
-.time-point{
-    background-color: red;
-}
 .content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .time-point:nth-of-type(even) .content{
     flex-direction: row; 
-    background-color: green;
+}
+.time-point{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 .images{
     width: 45%;
     height: 100%;
 }
 .Text{
+    background-color: blueviolet;
+    border-radius: 4rem;
     width:45%;
     height: 100%;
 }
@@ -133,8 +145,6 @@ main{
     padding: 1rem;
 }
 .time-point:nth-of-type(odd) .content{
-    flex-direction: row-reverse; 
-    background-color: purple;
+    flex-direction: row-reverse;
 }
-
 </style>

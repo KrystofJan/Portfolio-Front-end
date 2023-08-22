@@ -14,8 +14,11 @@ export default{
 </script>
 <template>
     <div class="CV" v-if="show" v-on:click="close()">
-        <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
         <h1 class="heading" v-on:click="close()">LOOKING FOR A JOB !</h1>
+    </div>
+    <div v-else>
+        <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
+        <h1>ASDKJASHDUAGSHUD</h1>
     </div>
 </template>
 
@@ -34,7 +37,7 @@ export default{
     justify-content: center;
     align-items: center;
     background-size: 500% auto;
-    animation: colorGradient 2s ease-in-out;
+    animation: colorGradient 5s infinite alternate ease-in-out;
  }
  .heading{
     margin: auto;
@@ -43,8 +46,8 @@ export default{
     background-clip: text;
     color: transparent;
     background-size: 500% auto;
-    animation: colorGradient2 2s linear;
-    transition: 0s;
+    animation: colorGradient2 2s infinite alternate linear;
+    
  }
  @keyframes colorGradient {
   0% {

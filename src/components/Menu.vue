@@ -66,22 +66,15 @@ export default {
 </script>
 
 <template>
-    <!-- <div class="float-icon">
-        <img src="../assets/cookie-solid.svg" alt="cookie" class="icon-img-2"/>
-        <img src="../assets/heart-solid.svg" alt="cookie" class="icon-img-2"/>
-        <img src="../assets/music-solid.svg" alt="cookie" class="icon-img-2"/>
-        <img src="../assets/face-smile-solid.svg" alt="cookie" class="icon-img-2"/>
-        <img src="../assets/wine-bottle-solid.svg" alt="cookie" class="icon-img-2"/>
-    </div> -->
     <Transition name="floatMe">
         <FloatingIcons v-if="is_there" id="icon"/>
     </Transition>
-    <Transition>
+    <!-- <Transition> -->
         <div class="welcome" v-if="!is_shown">
                 <h1>Welcome to my site!</h1>    
                 <span class="click-me">Click the photo to open menu.</span>
         </div>
-    </Transition>
+    <!-- </Transition> -->
     
     <div class="menu">
         <div class="center-image">
@@ -95,10 +88,10 @@ export default {
             <img src="../assets/user-solid.svg" alt="</>" class="icon-img">
             <span>About me</span>
         </router-link>
-        <router-link v-on:click="showIcons()" to="/blog" class="icon">
-            <img src="../assets/code-solid.svg" alt="</>" class="icon-img">
+        <a v-on:click="showIcons()" href="https://github.com/KrystofJan" class="icon" target="_blank">
+            <img src="../assets/github.svg" alt="</>" class="icon-img">
             <span>My Work</span>
-        </router-link>
+        </a>
         <router-link v-on:click="showIcons()" to="/cv" class="icon">
             <img src="../assets/file-solid.svg" alt="</>" class="icon-img">
             <span>CV</span>
@@ -219,7 +212,7 @@ body{
   }
 }
 
-.v-enter-active,
+/* .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
 }
@@ -227,7 +220,7 @@ body{
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
+} */
 
 .floatMe-enter-active,
 .floatMe-leave-active {

@@ -1,22 +1,30 @@
-<script setup>
+<script>
+export default{
+  methods: {
+    oOp(comp){
+      console.log(comp)
+    }
+  }
+}
 </script>
 
 <template>
+  <!--TODO: Add route-link arrow  -->
   <router-view v-slot="{Component}">
-    <Transition name="Uscroll">
+    <!-- <Transition name="Uscroll"> -->
       <component :is="Component" />
-    </Transition>
+    <!-- </Transition> -->
   </router-view>
 </template>
 <style scoped>
-.Uscroll-enter-active,
+/* .Uscroll-enter-active,
 .Uscroll-leave-active {
   transition: opacity 0.5s ease;
-  /* background-color: #3c2041; */
+  background-color: #3c2041;
 }
 
 .Uscroll-enter-from,
 .Uscroll-leave-to {
   opacity: 1;
-}
+} */
 </style>
