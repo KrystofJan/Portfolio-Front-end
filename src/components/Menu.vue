@@ -49,25 +49,59 @@ export default {
     }
     console.log(middleX + " " + middleY + " " + rs.getPropertyValue("--icon-1-X"));
     },
+    
+    randomBg(){
+        let float_icons = document.getElementsByClassName("icon-img-2");
+        for(let i=0; i<float_icons.length;i++){
+            float_icons[i].top = Math.floor(Math.random()*90+5)+'%';
+            float_icons[i].left = Math.floor(Math.random()*90+5)+'%';
+            
+            console.log(float_icons[i].top + " " + float_icons[i].left);
+        }
+    },
   },
 };
 </script>
 
 <template>
-    <div class="welcome"  v-if="!is_shown">
-        <h1>Welcome to my site:</h1>
-        <span class="click-me">Click on the photo to open menu.</span>
+    <div class="float-icon">
+        <img src="../assets/cookie-solid.svg" alt="cookie" class="icon-img-2"/>
+        <img src="../assets/heart-solid.svg" alt="cookie" class="icon-img-2"/>
+        <img src="../assets/music-solid.svg" alt="cookie" class="icon-img-2"/>
+        <img src="../assets/face-smile-solid.svg" alt="cookie" class="icon-img-2"/>
+        <img src="../assets/wine-bottle-solid.svg" alt="cookie" class="icon-img-2"/>
     </div>
+    <Transition>
+        <div class="welcome" v-if="!is_shown">
+                <h1>Welcome to my site!</h1>    
+                <span class="click-me">Click the photo to open menu.</span>
+        </div>
+    </Transition>
     
     <div class="menu">
         <div class="center-image">
             <img src="../assets/profile_photo.png" alt="" id="profile-pic" v-on:click="showIcons()">
         </div>
-        <div class="icon" on-click="is_menu = "><img src="../assets/blog-solid.svg" alt="</>" id="icon-img"><span>Blog</span></div>
-    <div class="icon"><img src="../assets/user-solid.svg" alt="</>" id="icon-img"><span>About me</span></div>
-    <div class="icon"><img src="../assets/code-solid.svg" alt="</>" id="icon-img"><span>My Work</span></div>
-    <div class="icon"><img src="../assets/file-solid.svg" alt="</>" id="icon-img"><span>CV</span></div>
-    <div class="icon"><img src="../assets/phone-solid.svg" alt="</>" id="icon-img"><span>Contact</span></div>
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+            <img src="../assets/blog-solid.svg" alt="</>" class="icon-img">
+            <span>Blog</span>
+        </router-link>
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+            <img src="../assets/user-solid.svg" alt="</>" class="icon-img">
+            <span>About me</span>
+        </router-link>
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+            <img src="../assets/code-solid.svg" alt="</>" class="icon-img">
+            <span>My Work</span>
+        </router-link>
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+            <img src="../assets/file-solid.svg" alt="</>" class="icon-img">
+            <span>CV</span>
+        </router-link>
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+            <img src="../assets/phone-solid.svg" alt="</>" class="icon-img">
+            <span>Contact</span>
+        </router-link>
     
     </div>
     
@@ -75,5 +109,13 @@ export default {
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>
