@@ -56,16 +56,7 @@ export default {
         }
         console.log(middleX + " " + middleY + " " + rs.getPropertyValue("--icon-1-X"));
     },
-    // 
-//   setup(){
-//     let float_icons = document.getElementsByClassName("icon-img-2");
-//     for(let i=0; i<float_icons.length;i++){
-//         float_icons[i].top = Math.floor(Math.random()*90+5)+'%';
-//         float_icons[i].left = Math.floor(Math.random()*90+5)+'%';
-        
-//         console.log(float_icons[i].top + " " + float_icons[i].left);
-//     }
-//   }
+
   },created() {
     const interval = setInterval(() => {
             this.is_there = !this.is_there;
@@ -108,7 +99,7 @@ export default {
             <img src="../assets/code-solid.svg" alt="</>" class="icon-img">
             <span>My Work</span>
         </router-link>
-        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+        <router-link v-on:click="showIcons()" to="/cv" class="icon">
             <img src="../assets/file-solid.svg" alt="</>" class="icon-img">
             <span>CV</span>
         </router-link>
@@ -123,6 +114,111 @@ export default {
 </template>
 
 <style scoped>
+
+html{
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--background-nonlinear-1-color);
+}
+#app{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+.menu{
+  z-index: -2;
+  background: var(--background-1-color);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.center-image{
+  width: 20rem;
+  height: 20rem;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1 rem solid #000;
+  position: relative;
+}
+#profile-pic{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+  z-index: 1;
+}
+#profile-pic:hover{
+  transform: scale(1.1);
+}
+.icon{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transition: 0.2s;
+  opacity: 0;
+  transform-origin: center;
+  z-index: -1;
+  cursor: pointer;
+  text-decoration: none;
+}
+.icon:hover{
+  filter: drop-shadow(0 0 1rem #fff);
+}
+.icon-img{
+  filter: invert(1);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.welcome{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(
+        to right,
+        #ff1b6b 20%,
+        #45caff 30%,
+        #e81cff 70%,
+        #40c9ff 80%
+    );
+  background-clip: text;
+  color: transparent;
+  background-size: 500% auto;
+  animation: colorGradient 10s ease-in-out infinite alternate;
+}
+@keyframes colorGradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;

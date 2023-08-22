@@ -17,9 +17,9 @@ const routes = [
         component: () => import("../components/AboutMe.vue")
     },
     {
-        path: '/float',
-        name: 'float',
-        component: () => import("../components/FloatingIcons.vue")
+        path: '/cv',
+        name: 'cv',
+        component: () => import("../components/CV.vue")
     },
 ];
 
