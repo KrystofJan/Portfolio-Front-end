@@ -37,5 +37,11 @@ export default {
     height: 3rem;
     opacity: 1;
     filter: invert(1);
+    animation: moveUp ease-in-out 1s;
+}
+@keyframes moveUp{
+    100%{
+        transform: translateY(-100%);
+    }
 }
 </style>

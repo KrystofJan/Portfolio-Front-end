@@ -7,7 +7,9 @@ export default {
   data() {
     return {
       is_shown: false,
-      is_there: true
+      is_there_1: true,
+      is_there_2: true,
+      is_there_3: true,
     };
   },
   methods: {
@@ -58,9 +60,15 @@ export default {
     },
 
   },created() {
-    const interval = setInterval(() => {
+    const interval1 = setInterval(() => {
             this.is_there = !this.is_there;
-        }, 1000);
+        }, Math.floor(Math.random() * (1000 - 0 + 1)));
+    const interval2 = setInterval(() => {
+            this.is_there_2 = !this.is_there_2;
+        }, Math.floor(Math.random() * (1000 - 0 + 1)));
+    const interval3 = setInterval(() => {
+            this.is_there_3 = !this.is_there_3;
+        }, Math.floor(Math.random() * (1000 - 0 + 1)));
   }
 };
 </script>
@@ -68,6 +76,12 @@ export default {
 <template>
     <Transition name="floatMe">
         <FloatingIcons v-if="is_there" id="icon"/>
+    </Transition>
+    <Transition name="floatMe">
+        <FloatingIcons v-if="is_there_2" id="icon2"/>
+    </Transition>
+    <Transition name="floatMe">
+        <FloatingIcons v-if="is_there_3" id="icon3"/>
     </Transition>
     <!-- <Transition> -->
         <div class="welcome" v-if="!is_shown">
@@ -80,7 +94,7 @@ export default {
         <div class="center-image">
             <img src="../assets/profile_photo.png" alt="" id="profile-pic" v-on:click="showIcons()">
         </div>
-        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+        <router-link v-on:click="showIcons()" to="/blog_summary" class="icon">
             <img src="../assets/blog-solid.svg" alt="</>" class="icon-img">
             <span>Blog</span>
         </router-link>
@@ -232,7 +246,7 @@ body{
   opacity: 0;
 }
 
-#icon{
+#icon, #icon2, #icon3{
     z-index: 1;
 }
 </style>

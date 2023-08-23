@@ -17,7 +17,7 @@
             <div class="article-grid">
                 <article class="article-banner card">7</article>
                 <article class="article-banner card">8</article>
-                <a class="more-posts card" href="#">More posts</a>
+                <router-link v-on:click="showIcons()" to="/blog" class="more-posts card">More blog posts</router-link>
             </div>
             
         </main>

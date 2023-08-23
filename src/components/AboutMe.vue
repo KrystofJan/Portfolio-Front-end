@@ -3,8 +3,12 @@
     <!-- Make the colors blend from pastelle to darker more "adult" colors symbolize  growing up ?-->
     <!-- Maybe make the design more and more complex -->
     <!-- BACKGROUND animated... some space stuff or like graphic of time going by or smth like that -->
+    <video autoplay muted loop id="myVideo">
+        <source src="../assets/about_me_video.mp4" type="video/mp4">
+    </video>
     <main>
     <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
+    
     <div id="timeline">
         <div class="time-point">
             <h1 class="headln">Early childhood</h1>
@@ -34,6 +38,11 @@
                 <section class="images">
                     <img src="https://picsum.photos/200/300" alt="picsum">
                 </section>
+                <div class="line">
+                    <Callendar :month="`APR`"/>
+                    <Callendar :month="`MAY`"/>
+                    <Callendar :month="`JUN`"/>
+                </div>
                 <article class="Text">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate atque maiores dolorum sunt voluptas nisi cumque ad! At, eius sed deleniti voluptas fugit voluptatem? Veritatis voluptatum corrupti corporis voluptas?
@@ -51,6 +60,11 @@
                 <section class="images">
                     <img src="https://picsum.photos/200/300" alt="picsum">
                 </section>
+                <div class="line">
+                    <Callendar :month="`AUG`"/>
+                    <Callendar :month="`SEP`"/>
+                    <Callendar :month="`OCT`"/>
+                </div>
                 <article class="Text">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate atque maiores dolorum sunt voluptas nisi cumque ad! At, eius sed deleniti voluptas fugit voluptatem? Veritatis voluptatum corrupti corporis voluptas?
@@ -68,6 +82,11 @@
                 <section class="images">
                     <img src="https://picsum.photos/200/300" alt="picsum">
                 </section>
+                <div class="line">
+                    <Callendar :month="`OCT`"/>
+                    <Callendar :month="`NOV`"/>
+                    <Callendar :month="`DEC`"/>
+                </div>
                 <article class="Text">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate atque maiores dolorum sunt voluptas nisi cumque ad! At, eius sed deleniti voluptas fugit voluptatem? Veritatis voluptatum corrupti corporis voluptas?
@@ -80,7 +99,7 @@
             </div> 
         </div>
     </div>
-
+    <div id="middle-line"></div>
 </main>
 </template>
 
@@ -94,9 +113,47 @@ export default {
 </script>
 
 <style scoped>
+:root{
+    --bg-color: #3391ab;
+}
+#middle-line{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 10%;
+    height: 100%;
+    background-color: var(--bg-color,#00c8ff);
+    --mask:
+    radial-gradient(37.32px at 51.20px 50%,#000 99%,#0000 101%) 0 calc(50% - 64px)/51% 128px repeat-y,
+    radial-gradient(37.32px at -19.2px 50%,#0000 99%,#000 101%) 32px 50%/calc(51% - 32px) 128px repeat-y,
+		radial-gradient(37.32px at calc(100% - 51.20px) 50%,#000 99%,#0000 101%) 100% calc(50% - 64px)/51% 128px repeat-y,
+    radial-gradient(37.32px at calc(100% + 19.20px) 50%,#0000 99%,#000 101%) calc(100% - 32px) 50%/calc(51% - 32px) 128px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+.back-to-top{
+    filter: invert(1);
+}
+#myVideo {
+    z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.line{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 10rem;
+}
 main{
     z-index: -1;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     position: absolute;
     top: 0;
     left: 0;
@@ -117,30 +174,29 @@ main{
 }
 .content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
-}
-
-.time-point:nth-of-type(even) .content{
-    flex-direction: row; 
-}
-.time-point{
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
 }
 .images{
     width: 45%;
-    height: 100%;
 }
 .Text{
-    background-color: blueviolet;
-    border-radius: 4rem;
-    width:45%;
-    height: 100%;
+    width: 45%;
+    background-color: #00ceab;
 }
+
+.time-point{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.time-point:nth-of-type(even) .content{
+    flex-direction: row; 
+}
+
 .Text p{
     padding: 1rem;
 }
