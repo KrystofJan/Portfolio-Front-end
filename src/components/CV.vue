@@ -244,6 +244,7 @@ client</li>
     width: 8rem;
 }
 .start-section-content{
+    overflow-wrap: break-word;
     background-color: #ccc;
     width: 75%;
     padding: 1rem;
@@ -255,6 +256,9 @@ client</li>
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+}
+.section-heading{
+    text-decoration: underline;
 }
 .pointer{
     cursor: pointer;
@@ -395,6 +399,8 @@ client</li>
 main{
     background-image: url('../assets/cv_bg.jpg');
     height: 100vh;
+    font-family: "Lucida Console";
+    font-weight: thin;
     background-size: cover;
     background-position: center;
 }

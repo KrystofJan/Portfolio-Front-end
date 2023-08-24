@@ -9,11 +9,6 @@ const routes = [
     {
         path: '/blog',
         name: 'blog',
-        component: () => import("../components/MoreBlog.vue")
-    },
-    {
-        path: '/blog_summary',
-        name: 'blog_summary',
         component: () => import("../components/Blog.vue")
     },
     {

@@ -62,13 +62,13 @@ export default {
   },created() {
     const interval1 = setInterval(() => {
             this.is_there = !this.is_there;
-        }, Math.floor(Math.random() * (1000 - 0 + 1)));
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
     const interval2 = setInterval(() => {
             this.is_there_2 = !this.is_there_2;
-        }, Math.floor(Math.random() * (1000 - 0 + 1)));
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
     const interval3 = setInterval(() => {
             this.is_there_3 = !this.is_there_3;
-        }, Math.floor(Math.random() * (1000 - 0 + 1)));
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
   }
 };
 </script>
@@ -94,7 +94,7 @@ export default {
         <div class="center-image">
             <img src="../assets/profile_photo.png" alt="" id="profile-pic" v-on:click="showIcons()">
         </div>
-        <router-link v-on:click="showIcons()" to="/blog_summary" class="icon">
+        <router-link v-on:click="showIcons()" to="/blog" class="icon">
             <img src="../assets/blog-solid.svg" alt="</>" class="icon-img">
             <span>Blog</span>
         </router-link>

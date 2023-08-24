@@ -1,87 +1,308 @@
+<script>
+import FloatingIcons from './FloatingIcons.vue';
+export default {
+    components: {
+        FloatingIcons
+    },
+    data() {
+        return {
+        is_there: true,
+        is_there2: true,
+        is_there3: true,
+        };
+  },
+  created(){  
+    const interval1 = setInterval(() => {
+            this.is_there = !this.is_there;
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        
+    const interval2 = setInterval(() => {
+            this.is_there2 = !this.is_there2;
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        
+    const interval3 = setInterval(() => {
+            this.is_there3 = !this.is_there3;
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+    }
+}
+</script>
+
 <template>
     <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
     <div class="blog" id="blog">
         <main>
-            <div class="article-grid">
-                <article class="article-banner card">1</article>
-                <article class="article-banner card">2</article>
+            <header>
+                <div class="header-wrap">
+                    <h1>My Blog</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque modi odio, unde fuga alias facilis ullam nisi! Dolore, magnam sit porro rerum dolor esse officiis id necessitatibus at tempora dignissimos!</p>
+                </div>
+            </header>
+            <section class="article-wrap">
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme travel">
+                            Travel
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme tech">
+                            Technology
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme travel">
+                            Travel
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme tech">
+                            Technology
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme travel">
+                            Travel
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme tech">
+                            Technology
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme travel">
+                            Travel
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="article"> 
+                    <div class="img">
+                        <div class="theme tech">
+                            Technology
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-heading">I just started learning VUE</h3>
+                        <span class="article-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consectetur quasi ducimus natus eos qui minus beatae. Nam sequi soluta dolores totam nemo, exercitationem debitis rerum in magni dolorem vel!
+                        </span>
+                    </div>
+                </a>
+            </section>
+            <div class="right-section">
+                <img class="right-img" src="https://picsum.photos/206" alt="">
+                <img class="right-img" src="https://picsum.photos/205" alt="">
+                <img class="right-img" src="https://picsum.photos/200" alt="">
             </div>
-            <div class="article-grid">
-                <article class="article-banner card">3</article>
-                <article class="article-banner card">4</article>
+            <div class="left-section">
+                <img class="left-img" src="https://picsum.photos/205" alt="">
+                <img class="left-img" src="https://picsum.photos/203" alt="">
+                <img class="left-img" src="https://picsum.photos/201" alt="">
             </div>
-            <div class="article-grid">
-                <article class="article-banner card">5</article>
-                <article class="article-banner card">6</article>
-            </div>
-            <div class="article-grid">
-                <article class="article-banner card">7</article>
-                <article class="article-banner card">8</article>
-                <router-link v-on:click="showIcons()" to="/blog" class="more-posts card">More blog posts</router-link>
-            </div>
-            
+            <footer>
+                This is a footer
+            </footer>
         </main>
     </div>
 </template>
 
 
-<script setup>
 
-</script>
 
 <style scoped>
+
+.right-img:nth-of-type(1){
+    transform: rotate(45deg) scale(0.75);
+    position: relative;
+    top: 50%;
+}
+.right-img:nth-of-type(2){
+    transform: rotate(-15deg) scale(0.3);
+    position: relative;
+    top: 1%;
+}
+.right-img:nth-of-type(3){
+    transform: rotate(130deg) scale(0.5);
+    position: relative;
+    top: 67%;
+}
+.left-img:nth-of-type(1){
+    transform: rotate(45deg) scale(0.85);
+    position: relative;
+    top: -5%;
+}
+.left-img:nth-of-type(2){
+    transform: rotate(-15deg) scale(0.41);
+    position: relative;
+    top: 56%;
+}
+.left-img:nth-of-type(3){
+    transform: rotate(130deg) scale(0.23);
+    position: relative;
+    top: 33%;
+}
+
+footer{
+    grid-area: footer;
+    height: 10rem;
+    background-color: var(--purple);
+    border-top: 0.3rem solid var(--red);
+}
+
+.right-section{
+    grid-area: right;
+    width: 12.5vw;
+    overflow: hidden;
+}
+.left-section{
+    grid-area: left;
+    width: 12.5vw;
+    overflow: hidden;
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    'header header header header' 
+    'left middle middle right' 
+    'footer footer footer footer';
+}
+.img{
+    background-image: url('https://picsum.photos/400/300');
+    border-radius: 0.2rem 0.2rem 0 0;
+    width: 100%;
+    max-height: 30rem;
+    min-height: 15rem;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    grid-area: header;
+    background: var(--purple);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+    min-height: 50vh; 
+    background-attachment: fixed;
+    border-bottom: 0.3rem solid var(--red);
+}
+.header-wrap > p{
+    width: 50%;
+    margin: 0 auto;
+}
+.header-wrap{
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 75%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+}
 #blog{
     position: absolute;
     top: 0;
     left: 0;
     padding: 0;
-  margin: 0;
+    margin: 0;
     min-height: 100vh;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darkcyan;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--blue),var(--dark-blue));
+    overflow-x: hidden;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 75%;
-    height: 75%;
-    gap: 1rem;
-}
-.card{
+.article{
+    border: 0.2rem solid #000;
+    border-radius: 0.5rem;
     background-color: #fff;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    text-align: center;
+    text-decoration: none;
+    color: #000;
 }
-.card:hover{
-    transform: scale(1.025);
-    box-shadow: 0 0 1rem #333;
-}
-.article-banner{
-    
-    height: 6rem;
+.article-content{
     padding: 1rem;
 }
-.article-grid{
+.article-heading{
+    text-decoration: underline;
+}
+.article-wrap{
+    grid-area: middle;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    border: 0.2rem solid #000;
+    background-color: var(--pink);
+    margin: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
-.article-grid:nth-of-type(odd) .article-banner:nth-last-of-type(even){
-    grid-column: 1 / 3;
+.theme{
+    position: relative;
+    top: 0.5rem;
+    left: 0.75rem;
+    width: fit-content;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
 }
-.article-grid:nth-of-type(even) .article-banner:nth-last-of-type(odd){
-    grid-column: 2 / 4;
+.travel{
+    background-color: #1bce00;
 }
-.article-grid:last-of-type .article-banner:last-of-type{
-    grid-column: 2 / 3;
+.tech{
+    background-color: rgb(14, 195, 255);
 }
-.more-posts{
-    background-color: #fff;
-}
+
 </style>

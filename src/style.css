@@ -2,6 +2,11 @@
   --background-1-color: linear-gradient(#323238,#3c2041 );
   --background-nonlinear-1-color: #323238;
   --background-nonlinear-color: #3c2041;
+  --pink: #f1b5b5;
+  --blue: #9fd5f1;
+  --dark-blue: #70b6ea;
+  --purple: #e6dce7;
+  --red: #ca937f;
 }
 body{
   margin: 0;
