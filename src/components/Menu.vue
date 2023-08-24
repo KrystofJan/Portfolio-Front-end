@@ -10,6 +10,8 @@ export default {
       is_there_1: true,
       is_there_2: true,
       is_there_3: true,
+      is_there_4: true,
+      is_there_5: true,
     };
   },
   methods: {
@@ -69,6 +71,12 @@ export default {
     const interval3 = setInterval(() => {
             this.is_there_3 = !this.is_there_3;
         }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+    const interval4 = setInterval(() => {
+            this.is_there_4 = !this.is_there_4;
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+    const interval5 = setInterval(() => {
+            this.is_there_5 = !this.is_there_5;
+        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
   }
 };
 </script>
@@ -82,6 +90,12 @@ export default {
     </Transition>
     <Transition name="floatMe">
         <FloatingIcons v-if="is_there_3" id="icon3"/>
+    </Transition>
+    <Transition name="floatMe">
+        <FloatingIcons v-if="is_there_4" id="icon4"/>
+    </Transition>
+    <Transition name="floatMe">
+        <FloatingIcons v-if="is_there_5" id="icon5"/>
     </Transition>
     <!-- <Transition> -->
         <div class="welcome" v-if="!is_shown">
@@ -110,7 +124,7 @@ export default {
             <img src="../assets/file-solid.svg" alt="</>" class="icon-img">
             <span>CV</span>
         </router-link>
-        <router-link v-on:click="showIcons()" to="/blog" class="icon">
+        <router-link v-on:click="showIcons()" to="/contacts" class="icon">
             <img src="../assets/phone-solid.svg" alt="</>" class="icon-img">
             <span>Contact</span>
         </router-link>

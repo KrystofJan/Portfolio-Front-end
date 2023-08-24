@@ -7,6 +7,7 @@
   --dark-blue: #70b6ea;
   --purple: #e6dce7;
   --red: #ca937f;
+  --bg-color: linear-gradient(141deg, #b8830f 0%, #d5db1f 51%, #a3e82c 75%);
 }
 body{
   margin: 0;

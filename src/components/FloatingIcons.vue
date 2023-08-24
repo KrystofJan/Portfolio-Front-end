@@ -8,7 +8,7 @@ export default {
             posy: Math.floor(Math.random() * (90 - 10 + 1)) + 10 + "%",
             rot: Math.floor(Math.random() * (359 - 0 + 1)) + "deg",
             // img_srcs:["../assets/cookie-solid.svg","../assets/heart-solid.svg","../assets/beer-mug-solid.svg"], 
-            img_index: Math.floor(Math.random() * (6 - 0 + 1))
+            img_index: Math.floor(Math.random() * (12 - 0 + 1))
             // TODO change to random values
 
         }
@@ -28,6 +28,14 @@ export default {
     <img v-else-if="img_index===4" src="../assets/face-smile-solid.svg" alt="face" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
     <img v-else-if="img_index===5" src="../assets/beer-mug-empty-solid.svg" alt="beer" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
     <img v-else-if="img_index===6" src="../assets/music-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===7" src="../assets/hippo-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===8" src="../assets/otter-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===9" src="../assets/frog-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===10" src="../assets/dog-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===11" src="../assets/keyboard-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    <img v-else-if="img_index===12" src="../assets/bugs-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
+    
+    <img v-else-if="img_index===10" src="../assets/kiwi-bird-solid.svg" alt="music" class="icon-img-2" :style="{ top: this.posy, left: this.posX}"/>
 </template>
 
 <style scoped>
@@ -43,5 +51,16 @@ export default {
     100%{
         transform: translateY(-100%);
     }
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
 }
 </style>

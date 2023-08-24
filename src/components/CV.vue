@@ -84,6 +84,10 @@ export default{
     </div>
     <main v-else>
         <router-link to="/" class="back-to-top"><img src="../assets/arrow-up-solid.svg" alt="asd"></router-link>
+        <div class="file info" v-on:click="open_id(`info`)">
+            <img src="../assets/file-icon.png" class="file-icon" alt="work_experience"/>
+            <span class="file-name">info.txt</span>
+        </div>
         <div class="file edu" v-on:click="open_id(`education`)">
             <img src="../assets/file-icon.png" class="file-icon" alt="work_experience"/>
             <span class="file-name">Education.txt</span>
@@ -92,10 +96,7 @@ export default{
             <img src="../assets/file-icon.png" class="file-icon" alt="work_experience"/>
             <span class="file-name">work_experience.txt</span>
         </div>
-        <div class="file info" v-on:click="open_id(`info`)">
-            <img src="../assets/file-icon.png" class="file-icon" alt="work_experience"/>
-            <span class="file-name">info.txt</span>
-        </div>
+        
         <div class="file-window" v-if="show_window">
             <div class="blue-top">
                 <span class="window-name">{{ window_text }}</span> 
@@ -373,7 +374,7 @@ client</li>
 .file:hover{
     background-color: rgba(255, 255 ,255, 0.5)
 }
-.edu{
+.info{
     margin-top: unset;
 }
 .file-icon{
