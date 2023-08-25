@@ -144,14 +144,14 @@ export default {
                 </a>
             </section>
             <div class="right-section">
-                <img class="right-img" src="https://picsum.photos/206" alt="">
+                <!-- <img class="right-img" src="https://picsum.photos/206" alt="">
                 <img class="right-img" src="https://picsum.photos/205" alt="">
-                <img class="right-img" src="https://picsum.photos/200" alt="">
+                <img class="right-img" src="https://picsum.photos/200" alt=""> -->
             </div>
             <div class="left-section">
-                <img class="left-img" src="https://picsum.photos/205" alt="">
+                <!-- <img class="left-img" src="https://picsum.photos/205" alt="">
                 <img class="left-img" src="https://picsum.photos/203" alt="">
-                <img class="left-img" src="https://picsum.photos/201" alt="">
+                <img class="left-img" src="https://picsum.photos/201" alt=""> -->
             </div>
             <footer>
                 This is a footer
@@ -165,7 +165,7 @@ export default {
 
 <style scoped>
 
-.right-img:nth-of-type(1){
+/* .right-img:nth-of-type(1){
     transform: rotate(45deg) scale(0.75);
     position: relative;
     top: 50%;
@@ -194,13 +194,15 @@ export default {
     transform: rotate(130deg) scale(0.23);
     position: relative;
     top: 33%;
-}
+} */
 
 footer{
     grid-area: footer;
     height: 10rem;
-    background-color: var(--purple);
-    border-top: 0.3rem solid var(--red);
+    /* background-color: var(--purple); */
+    background-color: #fff;
+    /* border-top: 0.3rem solid var(--red); */
+    border-top: 0.3rem solid #000;
 }
 
 .right-section{
@@ -231,23 +233,23 @@ main{
 }
 header{
     grid-area: header;
-    background: var(--purple);
+    /* background: var(--purple); */
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;    
     text-align: center;
-    min-height: 50vh; 
+    min-height: 30vh; 
     background-attachment: fixed;
-    border-bottom: 0.3rem solid var(--red);
+    border-bottom: 0.3rem solid #000;
 }
 .header-wrap > p{
     width: 50%;
     margin: 0 auto;
 }
 .header-wrap{
-    background-color: white;
-    border-radius: 0.5rem;
+    /* background-color: white; */
+    /* border-radius: 0.5rem; */
     width: 75%;
     justify-content: center;
     flex-direction: column;
@@ -262,16 +264,24 @@ header{
     margin: 0;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, var(--blue),var(--dark-blue));
+    /* background: linear-gradient(to bottom, var(--blue),var(--dark-blue)); */
+    background-color: white;
     overflow-x: hidden;
 }
 
 .article{
-    border: 0.2rem solid #000;
+    /* border: 0.2rem solid #000; */
     border-radius: 0.5rem;
+
     background-color: #fff;
+    box-shadow: 0px 0px 1rem #ccc;
     text-decoration: none;
     color: #000;
+    transition: 0.2s ease;
+}
+.article:hover{
+    box-shadow: 0px 0px 1.5rem #bbb;
+    transform: scale(1.05);
 }
 .article-content{
     padding: 1rem;
@@ -284,11 +294,11 @@ header{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    border: 0.2rem solid #000;
-    background-color: var(--pink);
+    /* border: 0.2rem solid #000; */
+    /* background-color: var(--pink); */
     margin: 3rem;
     padding: 1rem;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 .theme{
     position: relative;

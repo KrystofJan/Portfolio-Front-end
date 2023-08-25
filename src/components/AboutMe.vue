@@ -24,10 +24,7 @@
                 </div>
                 <article class="Text">
                     <p>
-                        I was born on March 28th 2001 in Ostrava. Eversince I can remember I was quite a creative and playful child.
-                        When I was three years old, me and my family moved to the country side, to the lovely village called Řepiště.
-                        Growing up didn't have trouble making friends and all the time I could I was either outside playing with them,
-                        or on the computer playing games with them. 
+                        I was born on March 28th, 2001 in Ostrava. Ever since I can remember I was quite a creative and playful child. When I was three years old, me and my family moved to the countryside, to the lovely village called Řepiště. Growing up didn't have trouble making friends and all the time I could I was either outside playing with them, or on the computer playing games with them. 
                     </p>
                 </article>
             </div> 
@@ -71,7 +68,7 @@
                 </div>
                 <article class="Text">
                     <p>
-                        I want to finish my degree, expand my knowlage about computer science etc. My ultimate goal is to buy back the house I grew up in, and do all these adult things :)
+                        I want to finish my degree, expand my knowlage about computer science etc. My ultimate goal is to buy back the house I grew up in and do all these adult things 🙃
                     </p>
                 </article>
             </div> 

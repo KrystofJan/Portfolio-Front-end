@@ -64,19 +64,19 @@ export default {
   },created() {
     const interval1 = setInterval(() => {
             this.is_there = !this.is_there;
-        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
     const interval2 = setInterval(() => {
             this.is_there_2 = !this.is_there_2;
-        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
     const interval3 = setInterval(() => {
             this.is_there_3 = !this.is_there_3;
-        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
     const interval4 = setInterval(() => {
             this.is_there_4 = !this.is_there_4;
-        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
     const interval5 = setInterval(() => {
             this.is_there_5 = !this.is_there_5;
-        }, Math.floor(Math.random() * (1000 - 100 + 1) + 100));
+        }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
   }
 };
 </script>

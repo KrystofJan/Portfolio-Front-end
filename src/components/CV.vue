@@ -240,6 +240,10 @@ client</li>
     border-top: 5px solid #dadada;
     border-bottom: 5px solid #dadada;
 }
+.window-name{
+    padding-left: 1rem;
+    color: white;
+}
 .profile-pic{
     height: 8rem;
     width: 8rem;
